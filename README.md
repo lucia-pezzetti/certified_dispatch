@@ -68,32 +68,6 @@ python -m certified_dispatch.run_manhattan_strategic --output results/strategic 
     --reference results/pooling
 ```
 
-### Figures and numbers
-
-Data and TikZ sources of Figures 1 to 3, and every number quoted in Section IV
-next to the value stated in the paper.
-
-```sh
-python -m certified_dispatch.build_figures --pooling results/pooling --exploration results/exploration \
-    --strategic results/strategic --output figures
-python -m certified_dispatch.paper_numbers --grid results/grid --pooling results/pooling \
-    --exploration results/exploration --strategic results/strategic
-```
-
-The same commands are available as `make grid`, `make pooling`, `make exploration`,
-`make strategic`, `make figures` and `make numbers`.
-
-## What a run contains
-
-```
-results/<run>/
-  config.json, metadata.json   parameters, versions, SHA-256 of sources, network and inputs
-  source/certified_dispatch/   snapshot of the package at the start of the run
-  network.json, inputs/        the road graph and the prepared cells
-  <cell>/blocks_*.npz          per-block metrics and decision traces; checkpoint.npz for --resume
-  *.csv, audit.json, figures/  audited summary tables and diagnostic plots
-```
-
 ## Licenses
 
 The code is released under the MIT License (see `LICENSE`). The road networks in
