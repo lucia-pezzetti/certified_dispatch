@@ -1,0 +1,5 @@
+arm,metric,mean,ci
+pooled_optimistic_relaxed,conditional_explored_loss,0.07831935172183437,0.0002954122623856868
+pooled_optimistic_relaxed,conditional_explored_shift,8.16878758223551,0.0063303640133785454
+pooled_random_relaxed,conditional_explored_loss,12.798453025891565,0.01957063313672342
+pooled_random_relaxed,conditional_explored_shift,29.56516611346866,0.07759123687243892

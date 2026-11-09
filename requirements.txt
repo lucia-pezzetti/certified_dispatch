@@ -1,0 +1,6 @@
+# Python >= 3.9. The versions used for the runs in the paper are recorded in each run's metadata.json
+# (numpy 1.26, scipy 1.16, numba 0.59, matplotlib 3.8 on Python 3.11).
+numpy>=1.24,<3
+scipy>=1.10,<2
+numba>=0.58
+matplotlib>=3.7,<4

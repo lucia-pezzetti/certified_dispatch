@@ -1,0 +1,41 @@
+{
+  "name": "rl_smoke",
+  "base_seed": 20261014,
+  "graph_seed": 913,
+  "side": 3,
+  "fleet": 3,
+  "seeds": 2,
+  "batches": 2,
+  "checkpoints": [
+    0,
+    20,
+    100
+  ],
+  "evaluation_counts": [
+    16,
+    64
+  ],
+  "epsilon_start": 0.8,
+  "epsilon_end": 0.1,
+  "epsilon_decay_episodes": 100,
+  "learning_rate_power": 0.6,
+  "alpha": 0.05,
+  "eta": 0.01,
+  "control_tolerances": [
+    0.25,
+    0.5,
+    1,
+    2,
+    4
+  ],
+  "payment_budgets": [
+    0,
+    0.25,
+    0.5,
+    1,
+    2,
+    4
+  ],
+  "control_tolerance": 1.0,
+  "payment_budget": 1.0
+}

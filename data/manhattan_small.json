@@ -1,0 +1,1400 @@
+{
+  "name": "Lower Manhattan OSM crop",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "copyright_url": "https://www.openstreetmap.org/copyright",
+  "license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "source_description": "SALT cached OSM south-Manhattan topology; stationary ECC delay overlay",
+  "source_file_sha256": "89e800cb5d1957ed6b4bf339392f3844c585376dd14b517c7a082fb9a3652421",
+  "upstream_source_sha256": {
+    "utils.py": "099f39baf0dc35168321f02a00be6c60973efcaff92b2a12a5495a922ad99e78",
+    "cache/06dc4d57186db9a246e11580806c66dadf9f2c04.json": "c411efa46bde9c0db197577b4310d0c2d922ac6280c8d8a9446b12e78a01d7cd",
+    "cache/d6116f9cde61338653f29ff69553634a71a3b70c.json": "bfe55a56c86032890fc0c2d8c85324db701509f1954cefa6c27a03b5a5cab58c",
+    "../data/processed/taxi_zones.dbf": "8aada81ec3f00bdfdf1f7c21302d0f7f45d1b99e8f8b1f60e40ef9180c42a523",
+    "../data/processed/taxi_zones.prj": "496a9166511a534dc8eff570dac27cdc91c817fe605e463b7ca70b25e94fbfd9",
+    "../data/processed/taxi_zones.shp": "70a5ec90bf0b6a4609b0846638e5331fee861830633cf29c4f6ed846d5d4c2ea",
+    "../data/processed/taxi_zones.shx": "830c7309d34c9a617757a3c821f9fc3868c9442a239ea855cd4e49f3b566597c"
+  },
+  "upstream_parallel_edge_rule": "Minimum nominal travel-time parallel edge; node ids sorted",
+  "osm_snapshot_date": "Not recorded in the cached export; not a current-map claim.",
+  "bounding_box_west_south_east_north": [
+    -74.014,
+    40.705,
+    -74.005,
+    40.713
+  ],
+  "selection": "Induced bounding-box subgraph, then largest strongly connected component; no added reverse edges.",
+  "nodes_in_box": 87,
+  "edges_in_box": 146,
+  "travel_time_model": "Independent Uniform(free, free + delay_width) for every traversal. Synthetic stationary noise; not measured traffic.",
+  "delay_width_rule": "free_flow_minutes * congestion_amplitude + red_window_seconds / 60 from the parent synthetic overlay; red_probability is not used.",
+  "nodes": [
+    {
+      "id": 0,
+      "source_id": 10,
+      "osm_id": 42422038,
+      "x": -74.0116583,
+      "y": 40.7096669
+    },
+    {
+      "id": 1,
+      "source_id": 11,
+      "osm_id": 42422042,
+      "x": -74.0105706,
+      "y": 40.7091731
+    },
+    {
+      "id": 2,
+      "source_id": 12,
+      "osm_id": 42422050,
+      "x": -74.0093797,
+      "y": 40.7086249
+    },
+    {
+      "id": 3,
+      "source_id": 13,
+      "osm_id": 42422053,
+      "x": -74.0082757,
+      "y": 40.7077288
+    },
+    {
+      "id": 4,
+      "source_id": 47,
+      "osm_id": 42427249,
+      "x": -74.0064417,
+      "y": 40.7070101
+    },
+    {
+      "id": 5,
+      "source_id": 48,
+      "osm_id": 42427251,
+      "x": -74.0056937,
+      "y": 40.7063813
+    },
+    {
+      "id": 6,
+      "source_id": 49,
+      "osm_id": 42427254,
+      "x": -74.0052076,
+      "y": 40.7060012
+    },
+    {
+      "id": 7,
+      "source_id": 130,
+      "osm_id": 42428374,
+      "x": -74.0108604,
+      "y": 40.7088206
+    },
+    {
+      "id": 8,
+      "source_id": 131,
+      "osm_id": 42428376,
+      "x": -74.0100172,
+      "y": 40.7098263
+    },
+    {
+      "id": 9,
+      "source_id": 132,
+      "osm_id": 42428377,
+      "x": -74.0095729,
+      "y": 40.7103389
+    },
+    {
+      "id": 10,
+      "source_id": 133,
+      "osm_id": 42428379,
+      "x": -74.0094861,
+      "y": 40.7104309
+    },
+    {
+      "id": 11,
+      "source_id": 134,
+      "osm_id": 42428385,
+      "x": -74.0090985,
+      "y": 40.710913
+    },
+    {
+      "id": 12,
+      "source_id": 135,
+      "osm_id": 42428391,
+      "x": -74.0086548,
+      "y": 40.7113948
+    },
+    {
+      "id": 13,
+      "source_id": 166,
+      "osm_id": 42429353,
+      "x": -74.0059779,
+      "y": 40.7072083
+    },
+    {
+      "id": 14,
+      "source_id": 167,
+      "osm_id": 42429354,
+      "x": -74.0068365,
+      "y": 40.7078606
+    },
+    {
+      "id": 15,
+      "source_id": 177,
+      "osm_id": 42429504,
+      "x": -74.0090373,
+      "y": 40.7053168
+    },
+    {
+      "id": 16,
+      "source_id": 178,
+      "osm_id": 42429507,
+      "x": -74.0090526,
+      "y": 40.7055699
+    },
+    {
+      "id": 17,
+      "source_id": 220,
+      "osm_id": 42429838,
+      "x": -74.0102034,
+      "y": 40.7077053
+    },
+    {
+      "id": 18,
+      "source_id": 221,
+      "osm_id": 42429840,
+      "x": -74.0090037,
+      "y": 40.7069579
+    },
+    {
+      "id": 19,
+      "source_id": 222,
+      "osm_id": 42429842,
+      "x": -74.0074544,
+      "y": 40.7060628
+    },
+    {
+      "id": 20,
+      "source_id": 223,
+      "osm_id": 42429844,
+      "x": -74.0067527,
+      "y": 40.705634
+    },
+    {
+      "id": 21,
+      "source_id": 356,
+      "osm_id": 42430848,
+      "x": -74.0051228,
+      "y": 40.7094179
+    },
+    {
+      "id": 22,
+      "source_id": 527,
+      "osm_id": 42433330,
+      "x": -74.0060233,
+      "y": 40.7079259
+    },
+    {
+      "id": 23,
+      "source_id": 585,
+      "osm_id": 42434410,
+      "x": -74.009838,
+      "y": 40.7081076
+    },
+    {
+      "id": 24,
+      "source_id": 586,
+      "osm_id": 42434412,
+      "x": -74.011935,
+      "y": 40.7093107
+    },
+    {
+      "id": 25,
+      "source_id": 587,
+      "osm_id": 42434418,
+      "x": -74.007136,
+      "y": 40.7063877
+    },
+    {
+      "id": 26,
+      "source_id": 588,
+      "osm_id": 42434420,
+      "x": -74.008622,
+      "y": 40.7073785
+    },
+    {
+      "id": 27,
+      "source_id": 698,
+      "osm_id": 42436178,
+      "x": -74.0139691,
+      "y": 40.7070893
+    },
+    {
+      "id": 28,
+      "source_id": 699,
+      "osm_id": 42436181,
+      "x": -74.0135999,
+      "y": 40.7079832
+    },
+    {
+      "id": 29,
+      "source_id": 700,
+      "osm_id": 42436184,
+      "x": -74.0132433,
+      "y": 40.7087788
+    },
+    {
+      "id": 30,
+      "source_id": 701,
+      "osm_id": 42436187,
+      "x": -74.013089,
+      "y": 40.7091384
+    },
+    {
+      "id": 31,
+      "source_id": 702,
+      "osm_id": 42436192,
+      "x": -74.0129792,
+      "y": 40.7093852
+    },
+    {
+      "id": 32,
+      "source_id": 859,
+      "osm_id": 42438155,
+      "x": -74.0112079,
+      "y": 40.7103692
+    },
+    {
+      "id": 33,
+      "source_id": 944,
+      "osm_id": 42440280,
+      "x": -74.0054945,
+      "y": 40.7090956
+    },
+    {
+      "id": 34,
+      "source_id": 945,
+      "osm_id": 42440282,
+      "x": -74.0064412,
+      "y": 40.7095739
+    },
+    {
+      "id": 35,
+      "source_id": 946,
+      "osm_id": 42440284,
+      "x": -74.0070413,
+      "y": 40.7098706
+    },
+    {
+      "id": 36,
+      "source_id": 947,
+      "osm_id": 42440287,
+      "x": -74.0077439,
+      "y": 40.7102231
+    },
+    {
+      "id": 37,
+      "source_id": 952,
+      "osm_id": 42440335,
+      "x": -74.0084241,
+      "y": 40.7095371
+    },
+    {
+      "id": 38,
+      "source_id": 953,
+      "osm_id": 42440340,
+      "x": -74.0078157,
+      "y": 40.7090976
+    },
+    {
+      "id": 39,
+      "source_id": 954,
+      "osm_id": 42440343,
+      "x": -74.0072873,
+      "y": 40.7087131
+    },
+    {
+      "id": 40,
+      "source_id": 955,
+      "osm_id": 42440345,
+      "x": -74.0065343,
+      "y": 40.708229
+    },
+    {
+      "id": 41,
+      "source_id": 956,
+      "osm_id": 42440347,
+      "x": -74.0054889,
+      "y": 40.7073945
+    },
+    {
+      "id": 42,
+      "source_id": 957,
+      "osm_id": 42440350,
+      "x": -74.0050152,
+      "y": 40.7068521
+    },
+    {
+      "id": 43,
+      "source_id": 1008,
+      "osm_id": 42442107,
+      "x": -74.0080313,
+      "y": 40.7054413
+    },
+    {
+      "id": 44,
+      "source_id": 1079,
+      "osm_id": 42443844,
+      "x": -74.0069661,
+      "y": 40.7117008
+    },
+    {
+      "id": 45,
+      "source_id": 1100,
+      "osm_id": 42444414,
+      "x": -74.0079409,
+      "y": 40.7055443
+    },
+    {
+      "id": 46,
+      "source_id": 1101,
+      "osm_id": 42444424,
+      "x": -74.0067819,
+      "y": 40.706735
+    },
+    {
+      "id": 47,
+      "source_id": 1219,
+      "osm_id": 42446622,
+      "x": -74.0129583,
+      "y": 40.7077766
+    },
+    {
+      "id": 48,
+      "source_id": 1270,
+      "osm_id": 42448583,
+      "x": -74.0080097,
+      "y": 40.7079949
+    },
+    {
+      "id": 49,
+      "source_id": 1271,
+      "osm_id": 42448593,
+      "x": -74.0056176,
+      "y": 40.7104144
+    },
+    {
+      "id": 50,
+      "source_id": 1365,
+      "osm_id": 42452708,
+      "x": -74.0055192,
+      "y": 40.7057998
+    },
+    {
+      "id": 51,
+      "source_id": 1410,
+      "osm_id": 42453902,
+      "x": -74.0074068,
+      "y": 40.7051798
+    },
+    {
+      "id": 52,
+      "source_id": 1411,
+      "osm_id": 42453934,
+      "x": -74.0107773,
+      "y": 40.7110135
+    },
+    {
+      "id": 53,
+      "source_id": 1433,
+      "osm_id": 42454795,
+      "x": -74.0088957,
+      "y": 40.7090594
+    },
+    {
+      "id": 54,
+      "source_id": 1434,
+      "osm_id": 42454798,
+      "x": -74.0060206,
+      "y": 40.7061497
+    },
+    {
+      "id": 55,
+      "source_id": 1468,
+      "osm_id": 42456492,
+      "x": -74.006478,
+      "y": 40.711231
+    },
+    {
+      "id": 56,
+      "source_id": 1474,
+      "osm_id": 42456888,
+      "x": -74.0121098,
+      "y": 40.7090349
+    },
+    {
+      "id": 57,
+      "source_id": 1540,
+      "osm_id": 272195270,
+      "x": -74.0081342,
+      "y": 40.7119884
+    },
+    {
+      "id": 58,
+      "source_id": 1633,
+      "osm_id": 588545728,
+      "x": -74.0079458,
+      "y": 40.7114635
+    },
+    {
+      "id": 59,
+      "source_id": 1677,
+      "osm_id": 1538237248,
+      "x": -74.0060881,
+      "y": 40.7099123
+    },
+    {
+      "id": 60,
+      "source_id": 1679,
+      "osm_id": 1538237434,
+      "x": -74.0073814,
+      "y": 40.710588
+    },
+    {
+      "id": 61,
+      "source_id": 1758,
+      "osm_id": 2821304143,
+      "x": -74.007068,
+      "y": 40.7117945
+    },
+    {
+      "id": 62,
+      "source_id": 1761,
+      "osm_id": 2824895141,
+      "x": -74.0087767,
+      "y": 40.7059917
+    },
+    {
+      "id": 63,
+      "source_id": 1813,
+      "osm_id": 4143875757,
+      "x": -74.0078441,
+      "y": 40.7117314
+    },
+    {
+      "id": 64,
+      "source_id": 1821,
+      "osm_id": 4149936235,
+      "x": -74.0135153,
+      "y": 40.7069507
+    },
+    {
+      "id": 65,
+      "source_id": 1822,
+      "osm_id": 4149936245,
+      "x": -74.0139431,
+      "y": 40.7071527
+    },
+    {
+      "id": 66,
+      "source_id": 1936,
+      "osm_id": 6262915547,
+      "x": -74.0076543,
+      "y": 40.7083391
+    },
+    {
+      "id": 67,
+      "source_id": 1937,
+      "osm_id": 6262915548,
+      "x": -74.007454,
+      "y": 40.7072416
+    },
+    {
+      "id": 68,
+      "source_id": 1977,
+      "osm_id": 8262936580,
+      "x": -74.0084808,
+      "y": 40.7115948
+    },
+    {
+      "id": 69,
+      "source_id": 1978,
+      "osm_id": 8262936586,
+      "x": -74.0082065,
+      "y": 40.7113856
+    },
+    {
+      "id": 70,
+      "source_id": 1984,
+      "osm_id": 8840333846,
+      "x": -74.0104404,
+      "y": 40.7115277
+    },
+    {
+      "id": 71,
+      "source_id": 1985,
+      "osm_id": 8840333851,
+      "x": -74.0101209,
+      "y": 40.7120585
+    }
+  ],
+  "edges": [
+    {
+      "u": 0,
+      "v": 1,
+      "free_flow_minutes": 0.19925600843547195,
+      "delay_width_minutes": 0.8532589341768806,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 0,
+      "v": 32,
+      "free_flow_minutes": 0.16195737784891504,
+      "delay_width_minutes": 0.6576269400106706,
+      "road_class": "secondary"
+    },
+    {
+      "u": 1,
+      "v": 0,
+      "free_flow_minutes": 0.19925600843547195,
+      "delay_width_minutes": 0.8532589341768806,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 1,
+      "v": 2,
+      "free_flow_minutes": 0.21908364273818653,
+      "delay_width_minutes": 0.8552416976071521,
+      "road_class": "residential"
+    },
+    {
+      "u": 1,
+      "v": 7,
+      "free_flow_minutes": 0.08609380858735326,
+      "delay_width_minutes": 0.6462474046214363,
+      "road_class": "secondary"
+    },
+    {
+      "u": 2,
+      "v": 3,
+      "free_flow_minutes": 0.2542447308642305,
+      "delay_width_minutes": 0.8587578064197564,
+      "road_class": "residential"
+    },
+    {
+      "u": 2,
+      "v": 53,
+      "free_flow_minutes": 0.11788444666383091,
+      "delay_width_minutes": 0.8451217779997164,
+      "road_class": "residential"
+    },
+    {
+      "u": 3,
+      "v": 48,
+      "free_flow_minutes": 0.0692567125615861,
+      "delay_width_minutes": 0.840259004589492,
+      "road_class": "residential"
+    },
+    {
+      "u": 3,
+      "v": 67,
+      "free_flow_minutes": 0.16421859375938297,
+      "delay_width_minutes": 0.8497551927092717,
+      "road_class": "residential"
+    },
+    {
+      "u": 4,
+      "v": 5,
+      "free_flow_minutes": 0.17709496366130087,
+      "delay_width_minutes": 0.8510428296994634,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 4,
+      "v": 46,
+      "free_flow_minutes": 0.07822909658896506,
+      "delay_width_minutes": 0.8411562429922299,
+      "road_class": "residential"
+    },
+    {
+      "u": 5,
+      "v": 6,
+      "free_flow_minutes": 0.10974428688318412,
+      "delay_width_minutes": 0.8443077620216518,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 5,
+      "v": 42,
+      "free_flow_minutes": 0.14453977735011522,
+      "delay_width_minutes": 0.6550142999358506,
+      "road_class": "primary"
+    },
+    {
+      "u": 5,
+      "v": 54,
+      "free_flow_minutes": 0.07031011254094065,
+      "delay_width_minutes": 0.6438798502144744,
+      "road_class": "primary"
+    },
+    {
+      "u": 6,
+      "v": 50,
+      "free_flow_minutes": 0.0643500003623371,
+      "delay_width_minutes": 0.8397683333695671,
+      "road_class": "residential"
+    },
+    {
+      "u": 7,
+      "v": 24,
+      "free_flow_minutes": 0.19733412039761877,
+      "delay_width_minutes": 0.8530667453730952,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 8,
+      "v": 1,
+      "free_flow_minutes": 0.1609155451395772,
+      "delay_width_minutes": 0.6574706651042699,
+      "road_class": "secondary"
+    },
+    {
+      "u": 8,
+      "v": 32,
+      "free_flow_minutes": 0.21832283342936654,
+      "delay_width_minutes": 0.85516561667627,
+      "road_class": "residential"
+    },
+    {
+      "u": 9,
+      "v": 8,
+      "free_flow_minutes": 0.1271624737593299,
+      "delay_width_minutes": 0.6524077043972328,
+      "road_class": "secondary"
+    },
+    {
+      "u": 9,
+      "v": 37,
+      "free_flow_minutes": 0.24544035569536676,
+      "delay_width_minutes": 0.85787736890287,
+      "road_class": "residential"
+    },
+    {
+      "u": 10,
+      "v": 9,
+      "free_flow_minutes": 0.023452255643804692,
+      "delay_width_minutes": 0.636851171679904,
+      "road_class": "secondary"
+    },
+    {
+      "u": 10,
+      "v": 52,
+      "free_flow_minutes": 0.23641257615710023,
+      "delay_width_minutes": 0.8569745909490434,
+      "road_class": "residential"
+    },
+    {
+      "u": 11,
+      "v": 10,
+      "free_flow_minutes": 0.11726826047449387,
+      "delay_width_minutes": 0.6509235724045074,
+      "road_class": "secondary"
+    },
+    {
+      "u": 11,
+      "v": 70,
+      "free_flow_minutes": 0.2464100780474792,
+      "delay_width_minutes": 0.8579743411380812,
+      "road_class": "residential"
+    },
+    {
+      "u": 12,
+      "v": 11,
+      "free_flow_minutes": 0.12352117568643274,
+      "delay_width_minutes": 0.6518615096862982,
+      "road_class": "secondary"
+    },
+    {
+      "u": 12,
+      "v": 60,
+      "free_flow_minutes": 0.26149656279463457,
+      "delay_width_minutes": 0.8594829896127968,
+      "road_class": "residential"
+    },
+    {
+      "u": 12,
+      "v": 69,
+      "free_flow_minutes": 0.07784367304466212,
+      "delay_width_minutes": 0.6450098842900326,
+      "road_class": "secondary"
+    },
+    {
+      "u": 13,
+      "v": 4,
+      "free_flow_minutes": 0.08373524911786764,
+      "delay_width_minutes": 0.8417068582451201,
+      "road_class": "residential"
+    },
+    {
+      "u": 14,
+      "v": 13,
+      "free_flow_minutes": 0.19214853213577154,
+      "delay_width_minutes": 0.8525481865469106,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 14,
+      "v": 67,
+      "free_flow_minutes": 0.16234913228545814,
+      "delay_width_minutes": 0.8495682465618792,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 15,
+      "v": 16,
+      "free_flow_minutes": 0.0526303522543513,
+      "delay_width_minutes": 0.8385963685587685,
+      "road_class": "residential"
+    },
+    {
+      "u": 16,
+      "v": 62,
+      "free_flow_minutes": 0.1015441993798632,
+      "delay_width_minutes": 0.8434877532713196,
+      "road_class": "residential"
+    },
+    {
+      "u": 17,
+      "v": 23,
+      "free_flow_minutes": 0.10124623125921856,
+      "delay_width_minutes": 0.8434579564592553,
+      "road_class": "residential"
+    },
+    {
+      "u": 18,
+      "v": 17,
+      "free_flow_minutes": 0.2440221026421824,
+      "delay_width_minutes": 0.8577355435975517,
+      "road_class": "residential"
+    },
+    {
+      "u": 18,
+      "v": 26,
+      "free_flow_minutes": 0.10587413143557052,
+      "delay_width_minutes": 0.8439207464768904,
+      "road_class": "residential"
+    },
+    {
+      "u": 19,
+      "v": 18,
+      "free_flow_minutes": 0.30614788684379945,
+      "delay_width_minutes": 0.8639481220177133,
+      "road_class": "residential"
+    },
+    {
+      "u": 19,
+      "v": 45,
+      "free_flow_minutes": 0.13199316421578156,
+      "delay_width_minutes": 0.8465326497549115,
+      "road_class": "residential"
+    },
+    {
+      "u": 20,
+      "v": 19,
+      "free_flow_minutes": 0.14163198030704813,
+      "delay_width_minutes": 0.8474965313640381,
+      "road_class": "residential"
+    },
+    {
+      "u": 20,
+      "v": 51,
+      "free_flow_minutes": 0.13938609061360074,
+      "delay_width_minutes": 0.6542412469253734,
+      "road_class": "primary"
+    },
+    {
+      "u": 20,
+      "v": 54,
+      "free_flow_minutes": 0.157038687750479,
+      "delay_width_minutes": 0.6568891364959052,
+      "road_class": "primary"
+    },
+    {
+      "u": 21,
+      "v": 33,
+      "free_flow_minutes": 0.08887739542014103,
+      "delay_width_minutes": 0.8422210728753474,
+      "road_class": "residential"
+    },
+    {
+      "u": 22,
+      "v": 41,
+      "free_flow_minutes": 0.13904311649773723,
+      "delay_width_minutes": 0.847237644983107,
+      "road_class": "residential"
+    },
+    {
+      "u": 23,
+      "v": 2,
+      "free_flow_minutes": 0.12916701698288163,
+      "delay_width_minutes": 0.8462500350316216,
+      "road_class": "residential"
+    },
+    {
+      "u": 23,
+      "v": 7,
+      "free_flow_minutes": 0.2197367320145946,
+      "delay_width_minutes": 0.8553070065347929,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 24,
+      "v": 0,
+      "free_flow_minutes": 0.08663063195124117,
+      "delay_width_minutes": 0.6463279281260195,
+      "road_class": "secondary"
+    },
+    {
+      "u": 24,
+      "v": 31,
+      "free_flow_minutes": 0.22930011875518408,
+      "delay_width_minutes": 0.8562633452088517,
+      "road_class": "residential"
+    },
+    {
+      "u": 25,
+      "v": 19,
+      "free_flow_minutes": 0.08389587228956184,
+      "delay_width_minutes": 0.8417229205622896,
+      "road_class": "residential"
+    },
+    {
+      "u": 25,
+      "v": 26,
+      "free_flow_minutes": 0.313836885869716,
+      "delay_width_minutes": 0.864717021920305,
+      "road_class": "residential"
+    },
+    {
+      "u": 26,
+      "v": 3,
+      "free_flow_minutes": 0.09079162667852016,
+      "delay_width_minutes": 0.8424124960011854,
+      "road_class": "residential"
+    },
+    {
+      "u": 27,
+      "v": 64,
+      "free_flow_minutes": 0.07823331311467378,
+      "delay_width_minutes": 0.8411566646448008,
+      "road_class": "residential"
+    },
+    {
+      "u": 27,
+      "v": 65,
+      "free_flow_minutes": 0.013761976344169901,
+      "delay_width_minutes": 0.8347095309677504,
+      "road_class": "residential"
+    },
+    {
+      "u": 28,
+      "v": 47,
+      "free_flow_minutes": 0.10953380110449648,
+      "delay_width_minutes": 0.844286713443783,
+      "road_class": "residential"
+    },
+    {
+      "u": 28,
+      "v": 65,
+      "free_flow_minutes": 0.18039691199919347,
+      "delay_width_minutes": 0.8513730245332527,
+      "road_class": "residential"
+    },
+    {
+      "u": 29,
+      "v": 28,
+      "free_flow_minutes": 0.17417146631656605,
+      "delay_width_minutes": 0.85075047996499,
+      "road_class": "residential"
+    },
+    {
+      "u": 30,
+      "v": 29,
+      "free_flow_minutes": 0.07838196837043142,
+      "delay_width_minutes": 0.8411715301703765,
+      "road_class": "residential"
+    },
+    {
+      "u": 31,
+      "v": 30,
+      "free_flow_minutes": 0.05398768509344467,
+      "delay_width_minutes": 0.8387321018426779,
+      "road_class": "residential"
+    },
+    {
+      "u": 31,
+      "v": 56,
+      "free_flow_minutes": 0.15920942926731818,
+      "delay_width_minutes": 0.8492542762600652,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 32,
+      "v": 52,
+      "free_flow_minutes": 0.14971484644422828,
+      "delay_width_minutes": 0.6557905602999675,
+      "road_class": "secondary"
+    },
+    {
+      "u": 33,
+      "v": 21,
+      "free_flow_minutes": 0.08887739542014103,
+      "delay_width_minutes": 0.8422210728753474,
+      "road_class": "residential"
+    },
+    {
+      "u": 33,
+      "v": 34,
+      "free_flow_minutes": 0.1787629342187877,
+      "delay_width_minutes": 0.8512096267552122,
+      "road_class": "residential"
+    },
+    {
+      "u": 33,
+      "v": 40,
+      "free_flow_minutes": 0.24297709665987155,
+      "delay_width_minutes": 0.8576310429993206,
+      "road_class": "residential"
+    },
+    {
+      "u": 34,
+      "v": 35,
+      "free_flow_minutes": 0.11257395603248939,
+      "delay_width_minutes": 0.8445907289365823,
+      "road_class": "residential"
+    },
+    {
+      "u": 34,
+      "v": 59,
+      "free_flow_minutes": 0.08943374166038935,
+      "delay_width_minutes": 0.8422767074993723,
+      "road_class": "residential"
+    },
+    {
+      "u": 35,
+      "v": 36,
+      "free_flow_minutes": 0.1323857414663937,
+      "delay_width_minutes": 0.8465719074799727,
+      "road_class": "residential"
+    },
+    {
+      "u": 35,
+      "v": 38,
+      "free_flow_minutes": 0.20119444837745157,
+      "delay_width_minutes": 0.8534527781710786,
+      "road_class": "residential"
+    },
+    {
+      "u": 36,
+      "v": 11,
+      "free_flow_minutes": 0.256427695141161,
+      "delay_width_minutes": 0.8589761028474495,
+      "road_class": "residential"
+    },
+    {
+      "u": 36,
+      "v": 60,
+      "free_flow_minutes": 0.09472057616145231,
+      "delay_width_minutes": 0.8428053909494786,
+      "road_class": "residential"
+    },
+    {
+      "u": 37,
+      "v": 36,
+      "free_flow_minutes": 0.17788581350052973,
+      "delay_width_minutes": 0.8511219146833864,
+      "road_class": "residential"
+    },
+    {
+      "u": 37,
+      "v": 38,
+      "free_flow_minutes": 0.1320530996528583,
+      "delay_width_minutes": 0.8465386432986192,
+      "road_class": "residential"
+    },
+    {
+      "u": 38,
+      "v": 39,
+      "free_flow_minutes": 0.11508857123206302,
+      "delay_width_minutes": 0.8448421904565396,
+      "road_class": "residential"
+    },
+    {
+      "u": 39,
+      "v": 34,
+      "free_flow_minutes": 0.2225134518090998,
+      "delay_width_minutes": 0.8555846785142434,
+      "road_class": "residential"
+    },
+    {
+      "u": 39,
+      "v": 40,
+      "free_flow_minutes": 0.1551390223305269,
+      "delay_width_minutes": 0.8488472355663861,
+      "road_class": "residential"
+    },
+    {
+      "u": 40,
+      "v": 14,
+      "free_flow_minutes": 0.09003225948542433,
+      "delay_width_minutes": 0.8423365592818758,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 40,
+      "v": 22,
+      "free_flow_minutes": 0.10195747661935248,
+      "delay_width_minutes": 0.8435290809952686,
+      "road_class": "residential"
+    },
+    {
+      "u": 41,
+      "v": 13,
+      "free_flow_minutes": 0.08599347131705933,
+      "delay_width_minutes": 0.8419326804650393,
+      "road_class": "residential"
+    },
+    {
+      "u": 41,
+      "v": 42,
+      "free_flow_minutes": 0.1361859666871066,
+      "delay_width_minutes": 0.846951930002044,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 42,
+      "v": 5,
+      "free_flow_minutes": 0.14453977735011522,
+      "delay_width_minutes": 0.6550142999358506,
+      "road_class": "primary"
+    },
+    {
+      "u": 42,
+      "v": 41,
+      "free_flow_minutes": 0.1361859666871066,
+      "delay_width_minutes": 0.846951930002044,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 43,
+      "v": 15,
+      "free_flow_minutes": 0.16041415920823668,
+      "delay_width_minutes": 0.849374749254157,
+      "road_class": "residential"
+    },
+    {
+      "u": 44,
+      "v": 61,
+      "free_flow_minutes": 0.02517053473960921,
+      "delay_width_minutes": 0.8358503868072943,
+      "road_class": "residential"
+    },
+    {
+      "u": 45,
+      "v": 43,
+      "free_flow_minutes": 0.025706152615222088,
+      "delay_width_minutes": 0.8359039485948556,
+      "road_class": "residential"
+    },
+    {
+      "u": 45,
+      "v": 51,
+      "free_flow_minutes": 0.11341649593851191,
+      "delay_width_minutes": 0.8446749829271846,
+      "road_class": "residential"
+    },
+    {
+      "u": 46,
+      "v": 25,
+      "free_flow_minutes": 0.0909988807011311,
+      "delay_width_minutes": 0.8424332214034465,
+      "road_class": "residential"
+    },
+    {
+      "u": 46,
+      "v": 54,
+      "free_flow_minutes": 0.17040305314763332,
+      "delay_width_minutes": 0.8503736386480967,
+      "road_class": "tertiary"
+    },
+    {
+      "u": 46,
+      "v": 67,
+      "free_flow_minutes": 0.14894274359111076,
+      "delay_width_minutes": 0.8482276076924444,
+      "road_class": "tertiary"
+    },
+    {
+      "u": 47,
+      "v": 56,
+      "free_flow_minutes": 0.2929214992407384,
+      "delay_width_minutes": 0.6772715582194441,
+      "road_class": "secondary"
+    },
+    {
+      "u": 48,
+      "v": 53,
+      "free_flow_minutes": 0.26100063713906513,
+      "delay_width_minutes": 0.8594333970472399,
+      "road_class": "residential"
+    },
+    {
+      "u": 48,
+      "v": 66,
+      "free_flow_minutes": 0.09060410757812659,
+      "delay_width_minutes": 0.842393744091146,
+      "road_class": "residential"
+    },
+    {
+      "u": 49,
+      "v": 55,
+      "free_flow_minutes": 0.2166303025369989,
+      "delay_width_minutes": 0.8549963635870332,
+      "road_class": "residential"
+    },
+    {
+      "u": 50,
+      "v": 54,
+      "free_flow_minutes": 0.10762668408337203,
+      "delay_width_minutes": 0.8440960017416705,
+      "road_class": "tertiary"
+    },
+    {
+      "u": 51,
+      "v": 20,
+      "free_flow_minutes": 0.13938609061360077,
+      "delay_width_minutes": 0.6542412469253734,
+      "road_class": "primary"
+    },
+    {
+      "u": 52,
+      "v": 70,
+      "free_flow_minutes": 0.11900527268299547,
+      "delay_width_minutes": 0.6511841242357826,
+      "road_class": "secondary"
+    },
+    {
+      "u": 53,
+      "v": 8,
+      "free_flow_minutes": 0.24030442965234974,
+      "delay_width_minutes": 0.8573637762985683,
+      "road_class": "residential"
+    },
+    {
+      "u": 53,
+      "v": 37,
+      "free_flow_minutes": 0.12367676971511546,
+      "delay_width_minutes": 0.8457010103048449,
+      "road_class": "residential"
+    },
+    {
+      "u": 54,
+      "v": 5,
+      "free_flow_minutes": 0.07031011254094065,
+      "delay_width_minutes": 0.6438798502144744,
+      "road_class": "primary"
+    },
+    {
+      "u": 54,
+      "v": 20,
+      "free_flow_minutes": 0.157038687750479,
+      "delay_width_minutes": 0.6568891364959052,
+      "road_class": "primary"
+    },
+    {
+      "u": 54,
+      "v": 46,
+      "free_flow_minutes": 0.17040305314763332,
+      "delay_width_minutes": 0.8503736386480967,
+      "road_class": "tertiary"
+    },
+    {
+      "u": 54,
+      "v": 50,
+      "free_flow_minutes": 0.10762668408337203,
+      "delay_width_minutes": 0.8440960017416705,
+      "road_class": "tertiary"
+    },
+    {
+      "u": 55,
+      "v": 44,
+      "free_flow_minutes": 0.12395405530570215,
+      "delay_width_minutes": 0.8457287388639035,
+      "road_class": "residential"
+    },
+    {
+      "u": 56,
+      "v": 24,
+      "free_flow_minutes": 0.06343285589761045,
+      "delay_width_minutes": 0.6428482617179748,
+      "road_class": "secondary"
+    },
+    {
+      "u": 57,
+      "v": 68,
+      "free_flow_minutes": 0.09809394259134069,
+      "delay_width_minutes": 0.6480474247220344,
+      "road_class": "secondary"
+    },
+    {
+      "u": 58,
+      "v": 44,
+      "free_flow_minutes": 0.16159821297206536,
+      "delay_width_minutes": 0.657573065279143,
+      "road_class": "secondary"
+    },
+    {
+      "u": 59,
+      "v": 21,
+      "free_flow_minutes": 0.1831044448475331,
+      "delay_width_minutes": 0.8516437778180866,
+      "road_class": "residential"
+    },
+    {
+      "u": 59,
+      "v": 49,
+      "free_flow_minutes": 0.1276656487892229,
+      "delay_width_minutes": 0.8460998982122556,
+      "road_class": "residential"
+    },
+    {
+      "u": 60,
+      "v": 55,
+      "free_flow_minutes": 0.19474507281778547,
+      "delay_width_minutes": 0.852807840615112,
+      "road_class": "residential"
+    },
+    {
+      "u": 60,
+      "v": 59,
+      "free_flow_minutes": 0.24681436734640208,
+      "delay_width_minutes": 0.8580147700679736,
+      "road_class": "residential"
+    },
+    {
+      "u": 61,
+      "v": 63,
+      "free_flow_minutes": 0.12932105751469994,
+      "delay_width_minutes": 0.6527314919605383,
+      "road_class": "secondary"
+    },
+    {
+      "u": 62,
+      "v": 45,
+      "free_flow_minutes": 0.16077826891387142,
+      "delay_width_minutes": 0.8494111602247205,
+      "road_class": "residential"
+    },
+    {
+      "u": 63,
+      "v": 57,
+      "free_flow_minutes": 0.07026730613132286,
+      "delay_width_minutes": 0.6438734292530317,
+      "road_class": "secondary"
+    },
+    {
+      "u": 63,
+      "v": 58,
+      "free_flow_minutes": 0.13363475326237936,
+      "delay_width_minutes": 0.8466968086595713,
+      "road_class": "secondary_link"
+    },
+    {
+      "u": 64,
+      "v": 47,
+      "free_flow_minutes": 0.1923007975307572,
+      "delay_width_minutes": 0.6621784529629469,
+      "road_class": "secondary"
+    },
+    {
+      "u": 64,
+      "v": 65,
+      "free_flow_minutes": 0.0803063117303064,
+      "delay_width_minutes": 0.841363964506364,
+      "road_class": "residential"
+    },
+    {
+      "u": 65,
+      "v": 27,
+      "free_flow_minutes": 0.013761976344169901,
+      "delay_width_minutes": 0.8347095309677504,
+      "road_class": "residential"
+    },
+    {
+      "u": 65,
+      "v": 28,
+      "free_flow_minutes": 0.1803969119991935,
+      "delay_width_minutes": 0.8513730245332527,
+      "road_class": "residential"
+    },
+    {
+      "u": 66,
+      "v": 14,
+      "free_flow_minutes": 0.16355281346618422,
+      "delay_width_minutes": 0.8496886146799518,
+      "road_class": "unclassified"
+    },
+    {
+      "u": 66,
+      "v": 39,
+      "free_flow_minutes": 0.09662969127826267,
+      "delay_width_minutes": 0.8429963024611596,
+      "road_class": "residential"
+    },
+    {
+      "u": 67,
+      "v": 46,
+      "free_flow_minutes": 0.14894274359111076,
+      "delay_width_minutes": 0.8482276076924444,
+      "road_class": "tertiary"
+    },
+    {
+      "u": 67,
+      "v": 48,
+      "free_flow_minutes": 0.17892611801166203,
+      "delay_width_minutes": 0.8512259451344996,
+      "road_class": "residential"
+    },
+    {
+      "u": 68,
+      "v": 12,
+      "free_flow_minutes": 0.049661919423245396,
+      "delay_width_minutes": 0.6407826212468201,
+      "road_class": "secondary"
+    },
+    {
+      "u": 68,
+      "v": 69,
+      "free_flow_minutes": 0.07283790730827792,
+      "delay_width_minutes": 0.8406171240641611,
+      "road_class": "secondary_link"
+    },
+    {
+      "u": 69,
+      "v": 58,
+      "free_flow_minutes": 0.04402889783392175,
+      "delay_width_minutes": 0.6399376680084216,
+      "road_class": "secondary"
+    },
+    {
+      "u": 70,
+      "v": 71,
+      "free_flow_minutes": 0.12097699223836506,
+      "delay_width_minutes": 0.651479882169088,
+      "road_class": "secondary"
+    },
+    {
+      "u": 71,
+      "v": 12,
+      "free_flow_minutes": 0.26972802895812775,
+      "delay_width_minutes": 0.6737925376770525,
+      "road_class": "secondary"
+    }
+  ]
+}

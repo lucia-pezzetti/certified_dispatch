@@ -1,0 +1,40 @@
+{
+  "sources_sha256": {
+    "/Users/luciapezzetti/Documents/Documents/PhD/GitHub/ECC2027_Submission/paper_loop/results/experiments/manhattan_scale_20261030/figure_data.csv": "2192f7aca80c96fcd9295a7b14be597e346c19bd7020ed73363996b07fd9282f",
+    "/Users/luciapezzetti/Documents/Documents/PhD/GitHub/ECC2027_Submission/paper_loop/results/experiments/manhattan_random_independent_20261102/figure_data.csv": "9f805c5d5712b6d74562cd72b8ced37ff23a018b9b655d887ac21f355ef401ba",
+    "/Users/luciapezzetti/Documents/Documents/PhD/GitHub/ECC2027_Submission/paper_loop/results/experiments/manhattan_random_independent_20261102/terminal_seed_summary.csv": "9cbbb18f836310c8cf1e99802b977379f3660c21759e15576b2da3ac489c3d2a",
+    "/Users/luciapezzetti/Documents/Documents/PhD/GitHub/ECC2027_Submission/paper_loop/results/experiments/manhattan_strategic_closedloop_20261101/summary_arms.csv": "f51e66ac3e78c273c7993970230e2d580eb64b10dfbc5ddd8a763438bddcc013",
+    "/Users/luciapezzetti/Documents/Documents/PhD/GitHub/ECC2027_Submission/paper_loop/results/experiments/manhattan_strategic_closedloop_20261101/curves.csv": "4807aefa8bc5157a8edd112792981092c2bd09b96c1a8a832c90581eeb85f524"
+  },
+  "figure1": "Panel (a): blocks of 10^5 epochs of the six-driver run; panel (b): blocks of the twenty-driver run. Means over seeds, 95% Student-t bands across seed means, clipped to [0, 100] for display.",
+  "figure2": "Per-seed conditional means over exploration epochs of the whole run; 95% Student-t intervals across seeds.",
+  "figure3": "Whole-run completion means and t intervals by allocation rule; all certification blocks under uniform allocation, no smoothing or subsampling.",
+  "data_prefix": "data/",
+  "outputs_sha256": {
+    "data/fig1a_pooled_support.csv": "7c9ae8a435ae3dfd1a38f13c6ab206901f328066c46633506d6b17cbb2c8c0f0",
+    "data/fig1a_pooled_variance.csv": "3657cd4911bc6152f9cc21dc7e2759608b979910788f61b330cb3d6681127c80",
+    "data/fig1a_private_variance.csv": "1f21aad99129fe4720c89d8c2cc24d8d9f6965946286205a160f22293f72ad63",
+    "data/fig1b_pooled_none.csv": "0278c94a274a86eea6f7275677acf0147c3e1a7bccbe6cf821fea2c8247731e7",
+    "data/fig1b_pooled_optimistic.csv": "b50d4a3ccb38a745ee6ab45a550cd369e8c3796e0f58e4eb727800df640c25b2",
+    "data/fig1b_pooled_optimistic_relaxed.csv": "92cdc859411448ede91531397e1e3caed690a079c2f86a5f3025bb647c5a984b",
+    "data/fig1b_pooled_random_relaxed.csv": "7c8bab88ec5ba04dc70fe600d1d2a81e5c67ce5746d48a46e31d8ce93e8628c6",
+    "data/fig2_summary.csv": "d8f74b031b0a1041f8b51f55e79d4980c2e23d85d6b577e07bc6c0fa8bd31d25",
+    "data/fig3a_direct_upper.csv": "cc7d4fd0cb31acc97f7fc5e71fce817f7e9eca7d3889cfc734a66e4acd1e573e",
+    "data/fig3a_direct_upper_matched.csv": "b406034b9ba51ae3cba1c79304f4571d676f86cc635def40e77d484bed1fb9c5",
+    "data/fig3a_dual_base.csv": "2d73ff239aab80ac28c2e0a1949e45deab802e0c0a1df72b269fbde50568b50c",
+    "data/fig3a_dual_certified.csv": "aad106913909824be1348fcb47203070ceaaa1d34052abbb2ece042e15bb7c2e",
+    "data/fig3a_uniform_matched.csv": "d211c5ca8286c55fb28e49cfe2962fe7f62ce191ea8ab903b129fcc396d21c41",
+    "data/fig3b_direct_upper.csv": "ac135665d9d79a9f7e16822446a59b4264e16e270a30f2a28f0fb81fe04598bf",
+    "data/fig3b_direct_upper_matched.csv": "a787a36c225e357dbfa966108552c5626bf99e6a2aeec96773a3c7c087aee7ff",
+    "data/fig3b_dual_base.csv": "f625cd21a03a53073b65f707b7bb8607c21590a9b9e4731b41ff954410f41e51",
+    "data/fig3b_dual_certified.csv": "37fb0014da72e78ea193426b9ec8322385d82769fa75407e6632bcbf0df7e3d9",
+    "data/fig3b_uniform_matched.csv": "431a6c804885fcf600c5c3eb60cf461c35550b684d84d33a0eb52558511a4ddc",
+    "figure1.tex": "bf8c7530bd5b260df4caf923acb23b5747b3d762b732440d564a527afbf1d683",
+    "figure1.tikz": "3d2d91eb1475ec44110236435da1bc9a6418e894a6641baa52e2a6f0051ee3ab",
+    "figure2.tex": "95c55e3e34efc88d87d732be7b9e9fe4d836f465109005d43f2c232d93b33348",
+    "figure2.tikz": "0b998393ca3c6f45e19d27ba86de4dfedbba039b7d986439fada712e71242ba9",
+    "figure3.tex": "febc53f7f6ad228d646c759822f253d364b35d0494b94e83b2799a39a7fe9143",
+    "figure3.tikz": "52f7f97cddd07e243a6c33e9386d7275f5db4fd6d53dd2d7742c2ce281cb5188",
+    "figure_style.tex": "21a8c6599b033b8d5ccd22ccd5bafa6e49f55bf5648ba258e4df83952752da7d"
+  }
+}

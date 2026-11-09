@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+\begin{axis}[title style={yshift=-5pt},xlabel style={yshift=1.5pt},paperaxis,at={(.75cm,0cm)},anchor=south west,width=3.05cm,height=2.15cm,xmin=0,xmax=10,ymin=-2,ymax=104,xtick={0,2,4,6,8,10},ytick={0,25,50,75,100},xlabel={Epochs (millions)},ylabel={Certification rate (\%)},title={(a) Six drivers},legend pos=south east,legend style={at={(.99,.65)},anchor=east}]
+\addplot[name path=loa0,draw=none,forget plot] table[x=x,y=lo,col sep=comma]{{data}fig1a_pooled_variance.csv};
+\addplot[name path=hia0,draw=none,forget plot] table[x=x,y=hi,col sep=comma]{{data}fig1a_pooled_variance.csv};
+\addplot[plotblue,fill opacity=.14,draw=none,forget plot] fill between[of=loa0 and hia0];
+\addplot[paperline,plotblue,solid,mark=none,mark repeat=20,mark phase=7] table[x=x,y=y,col sep=comma]{{data}fig1a_pooled_variance.csv};
+\addlegendentry{Pooled}
+\addplot[name path=loa1,draw=none,forget plot] table[x=x,y=lo,col sep=comma]{{data}fig1a_private_variance.csv};
+\addplot[name path=hia1,draw=none,forget plot] table[x=x,y=hi,col sep=comma]{{data}fig1a_private_variance.csv};
+\addplot[plotorange,fill opacity=.14,draw=none,forget plot] fill between[of=loa1 and hia1];
+\addplot[paperline,plotorange,dashed,mark=none,mark repeat=20,mark phase=7] table[x=x,y=y,col sep=comma]{{data}fig1a_private_variance.csv};
+\addlegendentry{Driver-specific}
+\addplot[name path=loa2,draw=none,forget plot] table[x=x,y=lo,col sep=comma]{{data}fig1a_pooled_support.csv};
+\end{axis}
+\begin{axis}[title style={yshift=-5pt},xlabel style={yshift=1.5pt}, paperaxis,at={(4.75cm,0cm)},anchor=south west,width=3.05cm,height=2.15cm,xmin=0,xmax=3,ymin=-2,ymax=104,xtick={0,1,2,3},ytick={0,25,50,75,100},xlabel={Epochs (millions)},title={(b) Twenty drivers},legend style={at={(1,.12)},anchor=south east,nodes={inner ysep=1.1pt},legend image code/.code={\draw[##1,mark repeat=2,mark phase=2] plot coordinates {(0cm,0cm) (0.2cm,0cm) (0.4cm,0cm)};},font=\fontsize{5.8}{6.6}\selectfont}]
+\addplot[name path=lob0,draw=none,forget plot] table[x=x,y=lo,col sep=comma]{{data}fig1b_pooled_none.csv};
+\addplot[name path=hib0,draw=none,forget plot] table[x=x,y=hi,col sep=comma]{{data}fig1b_pooled_none.csv};
+\addplot[plotgray,fill opacity=.14,draw=none,forget plot] fill between[of=lob0 and hib0];
+\addplot[paperline,plotgray,solid,mark=none,mark repeat=50,mark phase=7] table[x=x,y=y,col sep=comma]{{data}fig1b_pooled_none.csv};
+\addlegendentry{No exploration}
+\addplot[name path=lob1,draw=none,forget plot] table[x=x,y=lo,col sep=comma]{{data}fig1b_pooled_optimistic.csv};
+\addplot[name path=hib1,draw=none,forget plot] table[x=x,y=hi,col sep=comma]{{data}fig1b_pooled_optimistic.csv};
+\addplot[plotblue,fill opacity=.14,draw=none,forget plot] fill between[of=lob1 and hib1];
+\addplot[paperline,plotblue,dashed,mark=triangle*,mark repeat=50,mark phase=7] table[x=x,y=y,col sep=comma]{{data}fig1b_pooled_optimistic.csv};
+\addlegendentry{Optimistic, cap 1}
+\addplot[name path=lob2,draw=none,forget plot] table[x=x,y=lo,col sep=comma]{{data}fig1b_pooled_optimistic_relaxed.csv};
+\addplot[name path=hib2,draw=none,forget plot] table[x=x,y=hi,col sep=comma]{{data}fig1b_pooled_optimistic_relaxed.csv};
+\addplot[plotorange,fill opacity=.14,draw=none,forget plot] fill between[of=lob2 and hib2];
+\addplot[paperline,plotorange,solid,mark=none,mark repeat=50,mark phase=7] table[x=x,y=y,col sep=comma]{{data}fig1b_pooled_optimistic_relaxed.csv};
+\addlegendentry{Optimistic, uncapped}
+\addplot[name path=lob3,draw=none,forget plot] table[x=x,y=lo,col sep=comma]{{data}fig1b_pooled_random_relaxed.csv};
+\addplot[name path=hib3,draw=none,forget plot] table[x=x,y=hi,col sep=comma]{{data}fig1b_pooled_random_relaxed.csv};
+\addplot[plotgreen,fill opacity=.14,draw=none,forget plot] fill between[of=lob3 and hib3];
+\addplot[paperline,plotgreen,dashdotted,mark=none,mark repeat=50,mark phase=7] table[x=x,y=y,col sep=comma]{{data}fig1b_pooled_random_relaxed.csv};
+\addlegendentry{Random, uncapped}
+\end{axis}\end{tikzpicture}

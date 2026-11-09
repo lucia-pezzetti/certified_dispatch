@@ -1,0 +1,48 @@
+{
+  "name": "rl_grid10_paper",
+  "base_seed": 20261014,
+  "graph_seed": 913,
+  "side": 10,
+  "fleet": 6,
+  "seeds": 20,
+  "batches": 50,
+  "checkpoints": [
+    0,
+    2000,
+    10000,
+    50000,
+    200000,
+    1000000
+  ],
+  "evaluation_counts": [
+    64,
+    256,
+    1024,
+    4096
+  ],
+  "epsilon_start": 0.8,
+  "epsilon_end": 0.1,
+  "epsilon_decay_episodes": 1000000,
+  "learning_rate_power": 0.6,
+  "alpha": 0.05,
+  "eta": 0.01,
+  "control_tolerances": [
+    0.25,
+    0.5,
+    1,
+    2,
+    4
+  ],
+  "payment_budgets": [
+    0,
+    0.25,
+    0.5,
+    1,
+    2,
+    4
+  ],
+  "control_tolerance": 1.0,
+  "payment_budget": 1.0,
+  "interval_study": true,
+  "support_test_count": 128
+}

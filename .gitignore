@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+# Saved runs are large (gigabytes for the paper's configurations) and are not tracked.
+results/
+# Compiled figures and LaTeX by-products of the standalone figure files.
+figures/*.pdf
+figures/*.aux
+figures/*.log

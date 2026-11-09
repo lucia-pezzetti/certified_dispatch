@@ -1,0 +1,28 @@
+\begin{{tikzpicture}}
+\begin{{axis}}[title style={{yshift=-5pt}},xlabel style={{yshift=1.5pt}},paperaxis,at={{(0.6cm,0cm)}},anchor=south west,width=3.2cm,height=1.12cm,xmin=0,xmax=15,ymin=-.5,ymax=1.5,xtick={{0,5,10,15}},ytick=\empty,xlabel={{Minutes/driver}},title={{(a) Assignment loss}},grid=none,xmajorgrids,axis y line=none,clip=false]
+\addplot[xbar,bar width=7pt,fill=plotorange,draw=plotorange,line width=.6pt] coordinates {{({loss_opt:.14g},1)}};
+\draw[black,line width=.55pt] (axis cs:{loss_opt_lo:.14g},1) -- (axis cs:{loss_opt_hi:.14g},1);
+\draw[black,line width=.55pt] ([yshift=-2pt]axis cs:{loss_opt_lo:.14g},1) -- ([yshift=2pt]axis cs:{loss_opt_lo:.14g},1);
+\draw[black,line width=.55pt] ([yshift=-2pt]axis cs:{loss_opt_hi:.14g},1) -- ([yshift=2pt]axis cs:{loss_opt_hi:.14g},1);
+\node[anchor=west,font=\fontsize{{6.5}}{{7}}\selectfont,xshift=2.3pt] at (axis cs:{loss_opt_hi:.14g},1) {{{loss_opt:.3f}}};
+\addplot[xbar,bar width=7pt,fill=plotgreen,draw=plotgreen,line width=.6pt] coordinates {{({loss_rand:.14g},0)}};
+\draw[black,line width=.55pt] (axis cs:{loss_rand_lo:.14g},0) -- (axis cs:{loss_rand_hi:.14g},0);
+\draw[black,line width=.55pt] ([yshift=-2pt]axis cs:{loss_rand_lo:.14g},0) -- ([yshift=2pt]axis cs:{loss_rand_lo:.14g},0);
+\draw[black,line width=.55pt] ([yshift=-2pt]axis cs:{loss_rand_hi:.14g},0) -- ([yshift=2pt]axis cs:{loss_rand_hi:.14g},0);
+\node[anchor=west,font=\fontsize{{6.5}}{{7}}\selectfont,xshift=2.3pt] at (axis cs:{loss_rand_hi:.14g},0) {{{loss_rand:.1f}}};
+\end{{axis}}
+\begin{{axis}}[title style={{yshift=-5pt}},xlabel style={{yshift=1.5pt}},paperaxis,at={{(4.95cm,0cm)}},anchor=south west,width=3.2cm,height=1.12cm,xmin=0,xmax=35,ymin=-.5,ymax=1.5,xtick={{0,10,20,30}},ytick=\empty,xlabel={{Minutes/driver}},title={{(b) Extra payment $h$}},grid=none,xmajorgrids,axis y line=none,clip=false]
+\addplot[xbar,bar width=7pt,fill=plotorange,draw=plotorange,line width=.6pt] coordinates {{({shift_opt:.14g},1)}};
+\draw[black,line width=.55pt] (axis cs:{shift_opt_lo:.14g},1) -- (axis cs:{shift_opt_hi:.14g},1);
+\draw[black,line width=.55pt] ([yshift=-2pt]axis cs:{shift_opt_lo:.14g},1) -- ([yshift=2pt]axis cs:{shift_opt_lo:.14g},1);
+\draw[black,line width=.55pt] ([yshift=-2pt]axis cs:{shift_opt_hi:.14g},1) -- ([yshift=2pt]axis cs:{shift_opt_hi:.14g},1);
+\node[anchor=west,font=\fontsize{{6.5}}{{7}}\selectfont,xshift=2.3pt] at (axis cs:{shift_opt_hi:.14g},1) {{{shift_opt:.1f}}};
+\addplot[xbar,bar width=7pt,fill=plotgreen,draw=plotgreen,line width=.6pt] coordinates {{({shift_rand:.14g},0)}};
+\draw[black,line width=.55pt] (axis cs:{shift_rand_lo:.14g},0) -- (axis cs:{shift_rand_hi:.14g},0);
+\draw[black,line width=.55pt] ([yshift=-2pt]axis cs:{shift_rand_lo:.14g},0) -- ([yshift=2pt]axis cs:{shift_rand_lo:.14g},0);
+\draw[black,line width=.55pt] ([yshift=-2pt]axis cs:{shift_rand_hi:.14g},0) -- ([yshift=2pt]axis cs:{shift_rand_hi:.14g},0);
+\node[anchor=west,font=\fontsize{{6.5}}{{7}}\selectfont,xshift=2.3pt] at (axis cs:{shift_rand_hi:.14g},0) {{{shift_rand:.1f}}};
+\end{{axis}}
+\node[anchor=west,font=\fontsize{{6.5}}{{7}}\selectfont] at (1.1cm,-1.05cm) {{\tikz\fill[plotorange] (0,0) rectangle (.22,.12);\ Optimistic, uncapped}};
+\node[anchor=west,font=\fontsize{{6.5}}{{7}}\selectfont] at (4.8cm,-1.05cm) {{\tikz\fill[plotgreen] (0,0) rectangle (.22,.12);\ Random, uncapped}};
+\end{{tikzpicture}}
