@@ -4,59 +4,17 @@ Code and data for the numerical results of the paper *Certifying Dispatch of
 Self-Interested Drivers via Dual Pricing* (submitted to the European Control
 Conference 2027).
 
-A platform recommends one job to each driver and posts a price per job. The
-drivers' service costs are not known; the platform estimates them from completed
+A platform dispatches self-interested drivers in a network.
+It recommends one job to each driver and posts a price per job to make drivers follow the recommendation. 
+Since the drivers' service costs are not known, the platform estimates them from completed
 services and keeps confidence intervals around the estimates. The paper derives
 prices from an optimal dual of the estimated assignment problem, adjusted so
 that every recommended cost is covered with a margin, and a certificate that
-bounds the assignment loss and the extra payment. Section IV of the paper tests
-this loop in three simulated settings, all reproduced by the code here:
-
-| Section | Experiment | Entry point |
-|---|---|---|
-| IV-A | Assignment accuracy and participation on a stochastic 10 x 10 grid with Q-learning routing policies | `run_rl.py` |
-| IV-B | Online certification from pooled observations on the southern Manhattan road graph, six drivers | `run_manhattan_scale.py` |
-| IV-B | Exploration on uncertified epochs with twenty drivers | `run_manhattan_explore.py` |
-| IV-C | Strategic job requests, five price rules and three allocation rules | `run_manhattan_strategic.py` |
-
-Every run saves its configuration, the exact versions of its dependencies, a
-snapshot and the SHA-256 digests of the source files, the road network it used,
-its random seeds and a decision trace per checkpoint. The report step rechecks
-the saved decisions with an independent implementation of the assignment,
-pricing and certificate computations before it writes the summary tables.
-
-## Repository layout
-
-```
-certified_dispatch/        Python package
-  platform.py              assignment, dual prices, price menus, certificates (SciPy)
-  optimistic_kernel.py     compiled dispatch loop with exploration (Numba); Hungarian solver,
-                           counter-based random streams, confidence radii
-  manhattan_kernel.py      compiled dispatch loop without exploration: pooled, driver-specific,
-                           naive and oracle histories, support and variance-adaptive radii
-  manhattan_simulator.py   hubs, public supports, fixed routing policies and hidden expected
-                           costs on a road graph
-  model.py, rl.py          grid road model, tabular Q-learning, frozen policies
-  networks.py              directed road networks and the admissible routing action class
-  interval_study.py        all-pair intervals and payment comparisons of the grid study
-  strategic_game.py        one-shot replies, allocation rules and regrets of the strategic drivers
-  run_rl.py                Section IV-A runner
-  run_manhattan_scale.py   Section IV-B runner, six drivers (report: report_manhattan_scale.py)
-  run_manhattan_explore.py Section IV-B runner, twenty drivers (report: report_manhattan_explore.py)
-  run_manhattan_strategic.py  Section IV-C runner and report
-  build_figures.py         data and PGFPlots sources of Figures 1 to 3 from completed runs
-  paper_numbers.py         every number quoted in Section IV, computed from completed runs
-  tracking.py, diagnostics.py, plot_*.py   logging and diagnostic plots of the grid study
-  templates/               the TikZ layouts of the three figures of the paper
-configs/                   grid configurations (paper and smoke sizes)
-data/                      road networks (OpenStreetMap derivatives, see data/README.md)
-figures/                   data and TikZ sources of the paper's figures, as generated from the runs
-tests/                     57 unit tests
-```
+bounds the assignment loss and the extra payment.
 
 ## Installation
 
-Python 3.9 or later with NumPy, SciPy, Numba and Matplotlib:
+Install dependencies with
 
 ```sh
 python3 -m venv .venv
@@ -64,28 +22,9 @@ python3 -m venv .venv
 .venv/bin/python -m unittest discover -s tests -t .
 ```
 
-The runs in the paper used Python 3.11.7, NumPy 1.26.4, SciPy 1.16.2, Numba
-0.59.0 and Matplotlib 3.8.0 on macOS; `metadata.json` of every run records the
-versions actually used. The compiled kernels take about a minute to build the
-first time a runner starts.
-
 ## Reproducing the paper
 
-All commands run from the repository root and write to `results/`, which Git
-ignores. Each runner refuses to overwrite an existing output directory and
-resumes an interrupted run with `--resume`. Wall-clock times are for five
-worker processes on a laptop.
-
-```sh
-make pooling       # Section IV-B, six drivers: about 15 minutes
-make exploration   # Section IV-B, twenty drivers: about 20 minutes
-make strategic     # Section IV-C: about 15 minutes (checks itself against the pooling run)
-make figures       # data and TikZ sources of Figures 1 to 3 in figures/
-make numbers       # the numbers quoted in Section IV, next to the values stated in the paper
-make grid          # Section IV-A: the most expensive run, many hours on one core
-```
-
-### Section IV-A, assignment accuracy and participation
+### Assignment accuracy and participation (Section IV-A)
 
 ```sh
 python -m certified_dispatch.run_rl --config configs/rl_grid10_paper.json --output results/grid
